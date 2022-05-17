@@ -46,4 +46,14 @@ target 'reactnativeapp' do
     end
   end
 
+  pre_install do |installer|
+    $RNMapboxMaps.pre_install(installer)
+    ... other pre install hooks
+  end
+
+  post_install do |installer|
+    $RNMapboxMaps.post_install(installer)
+    ... other post install hooks
+  end
+
 end
